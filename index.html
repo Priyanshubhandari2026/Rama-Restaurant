@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rama Restaurant</title>
+    <!--Remix Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+    <a href="#" class="logo">
+        <img src="thali.png" alt="">
+        <h2 class="logo-str">Rama Restaurant</h2>
+    </a>
+   <ul class="navlinks">
+    <i class="ri-close-fill" id="menu-close-btn"></i>
+   <li><a href="#" class="active">Home</a></li>
+   <li><a href="#">About</a></li>
+   <li><a href="#">Menu</a></li>
+   <li><a href="#">Services</a></li>
+   <li><a href="#">Contacts</a></li>
+</ul>
+<i class="ri-restaurant-2-fill" id="open-menu-btn"></i>
+    </nav>    
+    </header>
+    <main>
+        <section class="Sub-section">
+            <div class="sub-details">
+                <h2 class="subtitle">Enjoy your Meal</h2>
+                 <h1 class="title">Warm and authentic,traditional cooking.</h1>
+<p class="description">Welcome to Rama Restaurant—a celebration of rich heritage and<br>
+     unforgettable flavors. Join us at our table to experience authentic regional recipes,<br> warm hospitality, and the true essence of traditional dining."</p>
+                
+    <div class="buttons">
+        <a href="#" class="btn order-now">Order Now</a>
+        <a href="" class="btn book-table">Book a Table</a>    
+    </div>
+    
+    
+    </div>
+
+        </section>
+    </main>
+    <script>
+        const MENUOPENBTN = document.querySelector("#open-menu-btn");
+        const MENUCLOSEBTN = document.querySelector("#menu-close-btn");
+        //toggle mobile menu visiblity
+        MENUOPENBTN.addEventListener("click",() => {
+            document.body.classList.toggle("show-mobile-menu");
+        }); 
+        //close Menu
+        MENUCLOSEBTN.addEventListener("click",() => MENUOPENBTN.click());
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins',sans-serif;
+}
+:root {
+    --font-size-s:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:3.2rem;
+}
+/* body{
+    background: #252525;
+} */
+header{
+    position: fixed;
+    width:100%;
+    background: transparent;
+    padding: 0 7%;
+    z-index: 1000;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 40px;
+    width: 40px;
+    margin-right:3px;
+}
+.logo .logo-text{
+    color: antiquewhite;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    font-family: cursive;
+}
+.navlinks li{
+    display: inline-block;
+     margin: 10px 20px; 
+}
+.navlinks li a{
+    font-size:var(--font-size-m);
+    color: antiquewhite;
+}
+.active{
+   position: relative;
+
+}
+.active::after{
+    content: '';
+    background: whitesmoke;
+    width:25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+.Sub-section{
+    height: 100vh;
+    width: 100;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(61, 21, 2, 0.3), rgba(61, 21, 2, 0.3)), url('bgim.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+.sub-details{
+    margin-left: 7%;
+    color: antiquewhite;
+
+}
+.sub-details .subtitle{
+    font-size: var(--font-size-xl);
+    color: #e8933e;
+    font-family: "Miniver",sans-serif;
+}
+.sub-details .title{
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+}
+.sub-details .description{
+max-width: 70%;
+margin: 24px 0 40px;
+font-size: var(--font-size-s);
+color: rgba(255,255,255, 0.67);
+}
+.sub-details .buttons{
+    display: flex;
+    gap: 23px;
+}
+.btn{
+    padding: 10px 26px;
+    color: #3b141c;
+    background: #e8933e;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.btn:hover , .book-table{
+    color: antiquewhite;
+    background: transparent;
+    border-color: antiquewhite;
+}
+.book-table:hover{
+    color: #3b141c;
+    background: #e8933e;
+    background-color: #e8933e;
+}
+.navbar :where(#menu-close-btn,#open-menu-btn){
+    display:none;
+}
+@media screen and (max-width:900px) {
+    .navlinks{
+        display: block;
+        position: fixed;
+        height: 100%;
+        width: 300px;
+        top: 0;
+        left: -300px;
+        background: #fff;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.2s ease;
+    }
+    .navlinks li a{
+        color: #252525;
+        font-size: var(--font-size-l);
+        display: block;
+        margin-top:17px ;
+    }
+ .active::after{
+    background-color: #252525;
+    left: -40px;
+    transform: translate(0,50%);
+    bottom: 50;
+ }
+ :root {
+   
+    --font-size-m:1.1rem;
+    --font-size-l:1.3rem;
+    --font-size-xl:1.5rem;
+    --font-size-xxl:1.8rem;
+}
+.navbar :where(#menu-close-btn,#open-menu-btn){
+    font-size: var(--font-size-l);
+    display: block;
+}
+.navbar #menu-close-btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+
+}
+.navbar #open-menu-btn{
+    color: #fff;
+
+}
+body.show-mobile-menu .navbar .navlinks{
+    left: 0;
+}
+header{
+padding: 0 5%;
+
+
+}
+body.show-mobile-menu header::before{
+    content: '';
+    position: fixed;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,0.2);
+}
+.Sub-section{
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    padding: 30px 20px 20px;
+}
+.sub-details{
+    margin-left: 0;
+}
+.sub-details :is(.title,.description){
+    max-width: 100%;
+}
+.sub-details .buttons{
+    justify-content: center;
+}
+}
+.logo-str{
+    color: antiquewhite;
+}
